@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: brown;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Desktop layout: 3 columns */
+      gap: 10px;
+      background-color: aqua;
+      padding: 10px;
+    }
+
+    .item {
+      text-align: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      max-width: 200px;
+      margin-top: 10px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.5);
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    /* ✅ Mobile-friendly layout */
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr; /* 1 column for phones */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>Image Gallery</h2>
+  <div class="gallery">
+    <div class="item">
+      <img src="waterbottle.jpeg" alt="Water Bottle">
+      <p class="caption">Water Bottle</p>
+    </div>
+    <div class="item">
+      <img src="pencilbox.jpeg" alt="Pencil Box">
+      <p class="caption">Pencil Box</p>
+    </div>
+    <div class="item">
+      <img src="notebook.jpeg" alt="Notebook">
+      <p class="caption">Notebook</p>
+    </div>
+    <div class="item">
+      <img src="lunchbox.jpeg" alt="Lunch Box">
+      <p class="caption">Lunch Box</p>
+    </div>
+    <div class="item">
+      <img src="colorPenils.jpeg" alt="Color Pencils">
+      <p class="caption">Color Pencils</p>
+    </div>
+    <div class="item">
+      <img src="bag.jpeg" alt="Bag">
+      <p class="caption">Bag</p>
+    </div>
+  </div>
+</body>
+</html>
